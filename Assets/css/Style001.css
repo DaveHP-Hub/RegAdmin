@@ -1,0 +1,82 @@
+* {
+    @font-face {
+        font-family: ADELLE SANS;
+        src: url("Assets/fonts/ADELLE SANS/AdelleSans-Bold.otf");
+        }
+}
+
+html,
+body,
+main {
+    height: 100%;
+    background-color: #e6e6e6 !important;
+}
+
+#panel-left {
+    display: flex !important;
+    background-color: #e6e6e6;
+}
+
+#panel-right {
+    display: flex !important;
+    align-items: center;
+    background-color: #F1F6F9;
+}
+
+h3 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+h2 {
+    color: #666666;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.description {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#panel-left .logo-container svg {
+    width: 220px;
+}
+
+#panel-right form input {
+    background-color: unset;
+    border: 0;
+    border-bottom: 2px solid #b3b3b3;
+    border-radius: 0;
+    font-weight: 400;
+}
+
+#panel-right form input:active {
+    outline: none;
+    outline-style: none;
+}
+
+.btn.btn-secondary {
+    border: 0 !important;
+    border-radius: 50px !important;
+    background-color: #666666 !important;
+    padding: 15px 40px !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+
+.links a {
+    color: #14274E;
+}
+
+@media only screen and (max-width: 767px) {
+    #panel-left {
+        display: none !important;
+    }
+
+}
+
+

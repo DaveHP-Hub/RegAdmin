@@ -1,0 +1,96 @@
+SCRIPT MYSQL REGADMIN_BD
+
+/******************************************************************************************/
+/*****************************************************************************************/
+
+CREATE TABLE Usuario (
+idUsuario int PRIMARY KEY not null AUTO_INCREMENT,
+sector varchar(10) not null,
+areaAdscripcion varchar (200) not null,
+cargo int not null,
+otroCargo varchar(100),
+telefono varchar(15) not null,
+extension varchar(5),
+email varchar(200),
+respAdmin tinyint(1)
+);
+
+
+CREATE TABLE RegistroAdministrativo (
+idRegAdmin int PRIMARY KEY not null AUTO_INCREMENT,
+nombreReg varchar(100),
+objetivoReg varchar(500),
+regJuridico tinyint(1),
+respJuri varchar(500),
+tipoInfo varchar(20),
+geoReg tinyint(1),
+temaReg int,
+otroTema varchar(100),
+variablesReg varchar(500),
+unidadMedida int,
+otroUnidad varchar(100),
+datosPer tinyint(1),
+tipoDatosP int,
+otroDPer varchar(100),
+nivelRegistro varchar(15),
+otroNivel varchar(100),
+anioEmision int,
+periodicidad int,
+otroPerio varchar(50),
+temporalidad DATE,
+refTempo tinyint(1),
+otroRefT varchar(100),
+formatoReg tinyint(1),
+otroFormato varchar(100),
+tipoMedio varchar(50),
+especiMedio varchar(100),
+metodologiaRec tinyint(1),
+metodoloiaEsp varchar(100),
+publicI tinyint(1),
+publicOpc varchar(500),
+fuenteSirve tinyint(1),
+insumoFuente varchar(100),
+docInsumo varchar(500),
+infoReg tinyint(1),
+infoApro varchar(500),
+utilSoft tinyint(1),
+softwareI varchar(100),
+InfoProce tinyint(1),
+formatoInfo int,
+otroFInfo varchar(100),
+analisisReg tinyint(1),
+tipoAna varchar(15),
+objetivoAna varchar(500),
+periodicidadAna int,
+otraPerioA varchar(100), 
+docAnaalisis tinyint(1),
+respDocAna varchar(500),
+difusionAna varchar(50),
+otroDifusion varchar(50),
+necesidadI tinyint(1),
+necesidadNS tinyint(1),
+necesidadS tinyint(1),
+fechaRegistro DATE,
+fechaUpdate DATE,
+FKUsuario int not null,
+FOREIGN KEY (FKUsuario) REFERENCES Usuario(idUsuario)
+);
+
+
+CREATE TABLE Municipio (
+idMunicipio int PRIMARY KEY not null AUTO_INCREMENT,
+nombreMunicipio int not null,
+FKUsuario int not null,
+FOREIGN KEY (FKUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE Dependencia (
+idDependencia int PRIMARY KEY not null AUTO_INCREMENT,
+nombreDependencia int NOT NULL,
+FKUsuario int not null,
+FOREIGN KEY (FKUsuario) REFERENCES Usuario(idUsuario)
+);
+
+
+/******************************************************************************************/
+/***********************************************************
