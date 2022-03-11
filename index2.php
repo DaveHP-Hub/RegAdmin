@@ -369,7 +369,7 @@ campoNumerico.addEventListener('keydown', function(evento) {
     campoNumerico.value.length === 0 &&
     teclaPresionada == 0;
 
-  if (sePresionoUnaTeclaNoAdmitida || campoNumerico) {
+  if (sePresionoUnaTeclaNoAdmitida || comienzaPorCero) {
     evento.preventDefault(); 
   }
 

@@ -837,7 +837,7 @@ medicamentos, alergias, embarazos, condición psicológica y/o psiquiátrica, et
                                         <label class="fieldlabels">31. Señale en orden de importancia (siendo 1 el más importante), los principales problemas que afectan la difusión del registro administrativo o las razones por las cuales no se genera:</label>
 
 
-                                        <select name="impRA[]" id="impRA" value="" class="form-control multi-select custom-select" style="outline-style: none; color:black" multiple data-selected-text-format="count">
+                                        <select name="impRA[]" id="impRA" value="" class="form-control multi-select custom-select" style="outline-style: none; color:black" multiple data-selected-text-format="count" data-none-selected-text="Sin especificar">
                                             <?php
 
                                             $str = $row['difusionAna'];
