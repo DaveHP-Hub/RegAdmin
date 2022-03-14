@@ -507,7 +507,7 @@ medicamentos, alergias, embarazos, condición psicológica y/o psiquiátrica, et
                                   
                                     <td>
                                         <label class="fieldlabels">11. ¿A que nivel obtiene la información del registro? Pueden elegir más de uno (máximo 4)</label>
-                                        <select name="levelRA[]" id="levelRA" disabled class="form-control multi-select custom-select" style="outline-style: none; color:black" multiple data-max-options="4" value="">
+                                        <select name="levelRA[]" id="levelRA" disabled class="form-control multi-select custom-select" style="outline-style: none; color:black" multiple data-max-options="4" value="" data-none-selected-text="Sin especificar">
                                             <?php
 
                                             $str = $row['nivelRegistro'];
