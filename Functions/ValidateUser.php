@@ -10,7 +10,7 @@ if(empty($_POST['email']))
 }
 else
 {
-    $email = $_POST['email'];
+    $email = $_POST['email']; 
     if(preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $email)) {
     
     $query = "Select idUsuario, email, respAdmin from usuario where email = '$email'";

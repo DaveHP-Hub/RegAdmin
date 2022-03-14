@@ -69,12 +69,12 @@ if($appo_ == "" || $appo_ == null || $appo_ == " ") {
 
 if($sec == "Municipal")  {
     
-    $SentenceMySQLM = "INSERT INTO Municipio(nombreMunicipio, FKUsuario) VALUES('$muni','$resulId')";
+    $SentenceMySQLM = "INSERT INTO municipio(nombreMunicipio, FKUsuario) VALUES('$muni','$resulId')";
     mysqli_query($conn, $SentenceMySQLM);
 }
 else if($sec == "Estatal") {
     
-    $SentenceMySQLD = "INSERT INTO Dependencia(nombreDependencia, FKUsuario) VALUES('$inst','$resulId')";
+    $SentenceMySQLD = "INSERT INTO dependencia(nombreDependencia, FKUsuario) VALUES('$inst','$resulId')";
     mysqli_query($conn, $SentenceMySQLD);
 }
     
