@@ -41,13 +41,13 @@ if($appo == "7") {
 if($appo_ == "" || $appo_ == null || $appo_ == " ") {
     echo 4;
 } else {
-    $SentenceMySQL = "INSERT INTO Usuario(sector, areaAdscripcion, cargo, otroCargo, telefono, extension, email, respAdmin) 
+    $SentenceMySQL = "INSERT INTO usuario(sector, areaAdscripcion, cargo, otroCargo, telefono, extension, email, respAdmin) 
     VALUES('$sec','$ads','$appo', '$appo_', '$tel','$ext', '$email', '$rAdmin')";
     echo mysqli_query($conn, $SentenceMySQL);
 }  
 } else {
     $appo_ = " ";
-    $SentenceMySQL = "INSERT INTO Usuario(sector, areaAdscripcion, cargo, otroCargo, telefono, extension, email, respAdmin) 
+    $SentenceMySQL = "INSERT INTO usuario(sector, areaAdscripcion, cargo, otroCargo, telefono, extension, email, respAdmin) 
     VALUES('$sec','$ads','$appo', '$appo_', '$tel','$ext', '$email', '$rAdmin')";
     echo mysqli_query($conn, $SentenceMySQL);
 }
